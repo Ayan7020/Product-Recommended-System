@@ -36,22 +36,7 @@ Thrilled to share a recent project where I harnessed the capabilities of deep le
 ## Technologies Involved:
 
 - Python, TensorFlow, Keras, and the powerful ResNet50 architecture.
-- Implemented Pickle for efficient storage and retrieval of feature vectors.
-
-## What's Next:
-
-- Excited to explore applications in recommendation systems, image similarity, and beyond.
-- Continuous learning and improvement to push the boundaries of what's possible.
-
-## Acknowledgments:
-
-- Gratitude to the open-source community and the creators of TensorFlow and Keras for empowering innovation.
-
-## Curious to Learn More? Dive into the Code:
-
-[GitHub Repository](https://github.com/your-username/your-repo)
-
-Excited to share this journey of exploration and discovery! 🚀✨ #MachineLearning #DeepLearning #ImageProcessing #DataScience
+- Implemented Pickle for efficient storage and retrieval of feature vectors. 
 
 ### For app.py
 * Loads a pre-trained ResNet50 model with ImageNet weights.
