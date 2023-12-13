@@ -1,2 +1,10 @@
-## End to End
-![Screenshot 1](E:\Product_Recommendation_System\Test\1915.png) 
+## End to End Deep learning and Machine learning Projects
+### Requirement modules 
+* Scikitlearn
+* Tensorflow
+* Keras
+* numpy
+* pickle
+* Flask
+* tqdm
+ 
