@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            background-color: #000;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        .common {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-color: #444;
+        }
+
+        .common:hover {
+            transform: scale(1.05);
+        }
+
+        .common img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 2px solid #555;
+            outline: none;
+            animation: pulse 1s infinite alternate; /* Added animation */
+        }
+
+        button:hover {
+            background-color: #777;
+            transform: scale(1.05);
+            animation: none; /* Disable the animation on hover */
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        button:active {
+            background-color: #444;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        .navbar h1 {
+            color: white;
+        }
+
+        .navbar::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        @keyframes pulse {
+            to {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>Product Recommendation System</h1>
+    </div>
+    
+    <h3>Uploaded Image:</h3>
+    <div class="common">
+        <img src="{{ url_for('test_path',filename=image_path[0]) }}" alt="Uploaded Image">
+    </div>
+
+    <h3>Recommended:</h3>
+    <div>
+        {% for image_url in image_path[1:] %}
+        <div class="common">
+            <img src="{{ url_for('path',filename=image_url) }}" alt="{{url_for('path',filename=image_url)}}">
+        </div>
+        {% endfor %}
+    </div>
+    
+    <form action="/">
+        <button type="submit">Go - Home</button>
+    </form>
+</body>
+
+</html>

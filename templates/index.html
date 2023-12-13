@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Recommendation System</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0; 
+            box-sizing: border-box;
+        } 
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f8f8;
+             background-color: #333; 
+        } 
+        .nav {
+            background-color: #333;
+            text-align: center; 
+            padding: 15px;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .big { 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 80vh;
+            margin-top: 80px;
+        }
+
+        .box { 
+            color: #333;
+            width: 90%;
+            max-width: 800px;
+            height: 400px; /* Adjust the height as needed */
+            text-align: center;
+            display: flex;  
+            flex-direction: column;
+            border: 3px solid #ccc;
+            border-radius: 30px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+            margin: 20px;
+        } 
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .form {
+            position: relative; 
+            font-size: 1.2em; 
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #555;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        input[type=file] {
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 15px;  
+            display: block;
+            margin: 20px auto;
+            background-color: #555;
+            color: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        } 
+
+        input[type=file]:hover {
+            background-color: #777;
+        }
+
+        .submit {
+            width: 150px;
+            height: 50px;
+            border-radius: 25px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .submit:hover {
+            background-color: #555;
+        }
+
+        @media screen and (max-width: 768px) {
+            .box {
+                width: 90%;
+            }
+        }
+    </style>
+</head> 
+<body>  
+    <div class="nav">
+        <h1>Product Recommendation System</h1>
+    </div>
+    <div class="big"> 
+        <div class="box">
+            <form action="/upload" method="post" enctype="multipart/form-data" class="form">
+                <label for="image">Select An Image :</label>
+                <input type="file" name="image" id="image" accept="image/*" required class="in"> 
+                <br>
+                <button type="submit" class="submit">Upload Image</button>
+            </form> 
+        </div> 
+    </div> 
+</body>
+</html>
