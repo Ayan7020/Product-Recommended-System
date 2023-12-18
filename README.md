@@ -1,4 +1,4 @@
-## End to End Porduct Recommended System 
+## End to End Product Recommended System 
 ### Requirement modules 
 * Scikitlearn
 * Tensorflow
